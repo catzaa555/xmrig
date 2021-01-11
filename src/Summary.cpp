@@ -99,7 +99,7 @@ static void print_cpu(Config *)
                info->hasAES()         ? GREEN_BOLD_S : RED_BOLD_S "-",
                info->isVM()           ? RED_BOLD_S " VM" : ""
                );
-#   if defined(XMRIG_FEATURE_HWLOC)
+#   if defined(XMRIG_FEATURE_LIBCPUID) || defined (XMRIG_FEATURE_HWLOC)
     Log::print(WHITE_BOLD("   %-13s") BLACK_BOLD("L2:") WHITE_BOLD("%.1f MB") BLACK_BOLD(" L3:") WHITE_BOLD("%.1f MB")
                CYAN_BOLD(" %zu") "C" BLACK_BOLD("/") CYAN_BOLD("%zu") "T"
                BLACK_BOLD(" NUMA:") CYAN_BOLD("%zu"),
